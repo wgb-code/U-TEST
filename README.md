@@ -1,60 +1,46 @@
-# CodeIgniter 4 Framework
+# Desafio técnico UMENTOR
 
-## What is CodeIgniter?
+A aplicação consiste em um Dashboard de controle de clientes, onde foi realizado um CRUD simples utilizando **PHP com auxilio do Framework Codeigniter 4**. Abaixo, as instruções de uso:
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+- Para executar este projeto deverá possuir um ambiente PHP como **XAMPP ou Laragon**
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- Criar um arquivo na raiz do projeto com o nome `.env` e alimenta-lo (colar dentro do mesmo) as informações do arquivo `.env.example`
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- O SGDB utilizado nesta aplicação foi desenvolvido em **MySQL** por constar no requisito técnico da vaga.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- O Codeigniter por sua vez possui sistemas de **Seeders e Migrations** o que facilita o cambio de SGDBS, porém, ao contrário do Laravel, para rodarmos as Migrations e Seeders pela primeira vez é necessário possuir o Banco de Dados criado, abaixo o SQL necessário para criar este banco.
 
-## Important Change with index.php
+```
+CREATE DATABASE dashboard COLLATE 'utf8mb4_unicode_ci';
+```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Após criar o Banco, deverá ser executado o comando de migrate para criação da tabela **Customers**:
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+```
+php spark migrate
+```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Para alimentar a tabela **Customers** com alguns usuários inicias, deixei preparado uma **Seed** que ao ser executada irá adicionar quatro usuários iniciais na tabela.
 
-## Repository Management
+`A execução dessa Seed é opicional, visto que não fará diferença caso não seja executada, a única finalidade dela é iniciar a aplicação com alguns registros na tabela.`
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+Caso seja do seu interesse, basta executar o comando no seu terminal:
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+```
+php spark db:seed Customers
+```
 
-## Contributing
+**Com todos os passos acima, a aplicação estará disponivel para ser utilizada e testada :D**
 
-We welcome contributions from the community.
+# Tomadas de Decisões
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+Assim como a grande maioria dos frameworks PHP existentes no mercado `(Symfony, Laravel, Slim)` o CodeIgniter segue a risca os mandamentos do `The Twelve-Factor App` e possui também diversas funcionalidades já conhecidas como `ORM, Ambientes da Aplicação`.
 
-## Server Requirements
+Eu optei em usar apenas o poder das Migrations e Seeders pois acredito que a finalidade deste teste é avaliar meu conhecimento na linguagem PHP e não em seus Frameworks, para isto, estarei escrevendo minhas models com SQL puro, ou seja, `SEM O USO DE ORM's` e como mencionei anteriromente, estarei utilizando o minimo do Framework que eu conseguir, para focar em um desenvolvimento limpo com PHP.
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+## Por que não PHP Vanilla?
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Dado todo o contexto acima, eu poderia ter optado em fazer com PHP puro ao invés de usar um framework, mas optei em adiantar todo o processo de `Autoload, configurações de ambientes e conexões com o banco de dados` usando o CodeIgniter.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+Desde já, não teria problema nenhum em desenvolver com PHP puro e poderia também optar pelo Laravel ou até mesmo Slim como o framework da aplicação, mas dado a demanda do projeto, CodeIgniter pareceu fazer mais sentido para mim.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
