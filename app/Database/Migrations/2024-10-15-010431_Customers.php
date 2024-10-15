@@ -48,6 +48,6 @@ class Customers extends Migration
 
     public function down()
     {
-        $this->forge->dropTable('customers');
+        $this->forge->dropTable('customers', true);
     }
 }
