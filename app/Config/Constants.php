@@ -92,3 +92,6 @@ define('EVENT_PRIORITY_NORMAL', 100);
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_HIGH instead.
  */
 define('EVENT_PRIORITY_HIGH', 10);
+
+
+defined('DB_DSN') || define('DB_DSN', 'mysql:host=%s;dbname=%s;port=%d;charset=%s');

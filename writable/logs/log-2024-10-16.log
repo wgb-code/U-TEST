@@ -1,0 +1,746 @@
+CRITICAL - 2024-10-16 02:29:43 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(18): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 02:33:22 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 37.
+ 1 APPPATH\Controllers\Dashboard.php(18): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+ERROR - 2024-10-16 02:35:00 --> mysqli_sql_exception: Duplicate entry 'joãozinho@gmail.com' for key 'email' in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 C:\Users\Isabella\Documents\development\U-TEST\app\Database\Seeds\Customers.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\Database\Seeder.php(147): App\Database\Seeds\Customers->run()
+#6 C:\Users\Isabella\Documents\development\U-TEST\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Isabella\Documents\development\U-TEST\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-10-16 02:36:46 --> mysqli_sql_exception: Duplicate entry 'joãozinho@gmail.com' for key 'email' in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', Array, false)
+#4 C:\Users\Isabella\Documents\development\U-TEST\app\Database\Seeds\Customers.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\Database\Seeder.php(147): App\Database\Seeds\Customers->run()
+#6 C:\Users\Isabella\Documents\development\U-TEST\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Isabella\Documents\development\U-TEST\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-10-16 02:36:49 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+ERROR - 2024-10-16 02:36:51 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+ERROR - 2024-10-16 02:37:20 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+ERROR - 2024-10-16 02:37:34 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+CRITICAL - 2024-10-16 02:42:27 --> ParseError: syntax error, unexpected token ","
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 31.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 APPPATH\Config\Events.php(47): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 02:48:12 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 02:48:44 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 02:48:56 --> TypeError: CodeIgniter\Database\BaseConnection::prepare(): Argument #1 ($func) must be of type Closure, string given, called in C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php on line 34
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 964.
+ 1 APPPATH\Models\CustomersModel.php(34): CodeIgniter\Database\BaseConnection->prepare('
+                SELECT
+                    id,
+                    name,
+                    email,
+                    status,
+                    admission_date,
+                    created_at,
+                    updated_at
+                FROM
+                    customers
+                ORDER BY
+                    name ASC
+            ')
+ 2 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 02:49:05 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+ERROR - 2024-10-16 02:53:01 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+ERROR - 2024-10-16 02:53:19 --> Erro ao obter clientes: Falha na conexão com o banco de dados.
+ERROR - 2024-10-16 03:02:22 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', '', 'dashboard', 3306, '', 0)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Isabella\Documents\development\U-TEST\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Isabella\Documents\development\U-TEST\app\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Isabella\Documents\development\U-TEST\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Isabella\Documents\development\U-TEST\system\rewrite.php(44): require_once('C:\\Users\\Isabel...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Isabella\Documents\development\U-TEST\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Isabella\Documents\development\U-TEST\app\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Isabella\Documents\development\U-TEST\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Isabella\Documents\development\U-TEST\system\rewrite.php(44): require_once('C:\\Users\\Isabel...')
+#14 {main}
+CRITICAL - 2024-10-16 03:02:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`
+ORDER BY `name` ASC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\CustomersModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:03:41 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:03:58 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:12 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 19.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:13 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 19.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:43 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:45 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:48 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:04:49 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:05:40 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 38.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:06:13 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:06:14 --> Error: Call to a member function prepare() on bool
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 34.
+ 1 APPPATH\Controllers\Dashboard.php(20): App\Models\CustomersModel->getAllCustomers()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:12:48 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 15.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:12:49 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 15.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:12:56 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:14:54 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:14:55 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:14 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:40 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:41 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:41 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:42 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:42 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:42 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:42 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:16:42 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:17:44 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:17:45 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:18:23 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:18:24 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:18:59 --> Error: Call to undefined function getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:19:00 --> Error: Call to undefined function getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 14.
+ 1 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:28:22 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Models\CustomersModel.php(22): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:28:25 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Models\CustomersModel.php(22): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:28:30 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Models\CustomersModel.php(22): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:29:18 --> ErrorException: Undefined variable $dbConfig
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 16.
+ 1 APPPATH\Models\CustomersModel.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dbConfig', 'C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Models\\CustomersModel.php', 16)
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:29:41 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 23.
+ 1 APPPATH\Models\CustomersModel.php(23): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:29:44 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 23.
+ 1 APPPATH\Models\CustomersModel.php(23): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:29:46 --> PDOException: could not find driver
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 23.
+ 1 APPPATH\Models\CustomersModel.php(23): PDO->__construct('
+            mysql:host=127.0.0.1;
+            dbname=dashboard;
+            port=3306;
+            charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:30:00 --> PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1
+         failed: Este host n�o � conhecido. 
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 19.
+ 1 APPPATH\Models\CustomersModel.php(19): PDO->__construct('mysql:host=127.0.0.1
+        ;dbname=dashboard;port=3306;charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:30:00 --> [Caused by] PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo for 127.0.0.1
+         failed: Este host n�o � conhecido. 
+in APPPATH\Models\CustomersModel.php on line 19.
+ 1 APPPATH\Models\CustomersModel.php(19): PDO->__construct('mysql:host=127.0.0.1
+        ;dbname=dashboard;port=3306;charset=utf8mb4', 'root', '')
+ 2 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:19 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:21 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:37 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:38 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:39 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:33:39 --> Error: Call to undefined function App\Models\getPDOConnection()
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(13): App\Models\CustomersModel->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 03:41:55 --> ParseError: syntax error, unexpected token "=", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Models\\CustomersModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CustomersModel')
+ 3 APPPATH\Controllers\Dashboard.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CustomersModel')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
