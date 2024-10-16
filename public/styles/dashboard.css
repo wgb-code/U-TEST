@@ -1,0 +1,84 @@
+@import url('reset.css');
+
+.logo-title {
+    gap: 10px;
+}
+
+.title-list {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FAFAFA;
+}
+
+.form-filter {
+    margin-block: 20px;
+    writing-mode: horizontal-tb;
+    gap: 8px;
+}
+
+.form-filter-input {
+    padding-block: 6px;
+    padding-left: 35px;
+    padding-right: 12px;
+    background-color: transparent;
+    border: 1px dashed #3F3F46;
+    color: #FAFAFA;
+    border-radius: 58px;
+    cursor: pointer;
+}
+
+.form-filter-input::placeholder {
+    color: #71717A;
+}
+
+.form-filter-input:focus {
+    outline: none;
+    border-color: #71717A;
+}
+
+.form-filter-group {
+    position: relative;
+    display: inline-block;
+}
+
+.form-filter-group img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.filter-btn {
+    border: 1px dashed #3F3F46;
+    border-radius: 58px;
+    background-color: transparent;
+    color: #71717A;
+    cursor: pointer;
+    padding: 8px 12px;
+    gap: 6px;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+    background-color: #27272A;
+    color: #FAFAFA;
+}
+
+main {
+    height: 100%;
+}
+
+header h1 {
+    color: #F4F4F5;
+    font-weight: 500;
+}
+
+header button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    gap: 10px;
+    background-color: #18181B;
+    border: 1px solid #27272A;
+    color: #D4D4D8;
+}
