@@ -61,7 +61,7 @@ class CustomersModel extends Model
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
         } catch (\Exception $e) {
-            log_message($e->getMessage());
+            log_message('error', $e->getMessage());
             return [];
         }
     }
@@ -80,7 +80,7 @@ class CustomersModel extends Model
 
             return (int) $stmt->fetchColumn();
         } catch (\Exception $e) {
-            log_message($e->getMessage());
+            log_message('error', $e->getMessage());
             return 0;
         }
     }

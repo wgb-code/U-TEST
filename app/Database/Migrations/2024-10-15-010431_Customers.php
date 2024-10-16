@@ -26,8 +26,8 @@ class Customers extends Migration
             ],
             'status' => [
                 'type'       => 'ENUM',
-                'constraint' => ['A', 'I'],
-                'default'    => 'A',
+                'constraint' => ['C', 'D', 'E', 'A', 'F'],
+                'default'    => 'C',
             ],
             'admission_date' => [
                 'type' => 'DATE',
