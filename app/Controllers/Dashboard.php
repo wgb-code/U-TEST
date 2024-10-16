@@ -18,7 +18,7 @@ class Dashboard extends BaseController
     public function index(): string
     {
         $page  = $this->request->getVar('page') ?: 1;
-        $limit = 10;
+        $limit = 1;
 
         $getCustomers   = $this->customersModel->getAllCustomers($page, $limit);
         $totalCustomers = $this->customersModel->countAllCustomers();
@@ -26,12 +26,16 @@ class Dashboard extends BaseController
         $data = [];
 
         if ($getCustomers) {
-            foreach ($getCustomers as $cs) {
-                $cs->admission_date = $this->dashboardHelper->formatDatePTBR($cs->admission_date);
-                $cs->created_at = $this->dashboardHelper->formatDatePTBR($cs->created_at);
-                $cs->updated_at = $this->dashboardHelper->formatDatePTBR($cs->updated_at);
 
-                $data[] = $cs;
+            foreach ($getCustomers as $cs) {
+                $data[] = [
+                    'name'      => $cs->name,
+                    'email'     => $cs->email,
+                    'status'    => $this->dashboardHelper->convertTypeToString($cs->status),
+                    'admission' => $this->dashboardHelper->formatDatePTBR($cs->admission_date),
+                    'created'   => $this->dashboardHelper->formatDatePTBR($cs->created_at),
+                    'updated'   => $this->dashboardHelper->formatDatePTBR($cs->updated_at),
+                ];
             }
         }
 

@@ -25,8 +25,8 @@
                     <img
                         src="<?= base_url('assets/user-plus.svg') ?>"
                         alt="Ícone de criação de usuário"
-                        width="24"
-                        height="24"
+                        width="20"
+                        height="20"
                     >
                     <p>Cadastrar</p>
                 </button>
@@ -34,7 +34,7 @@
         </ul>
     </header>
 
-    <main class="container border border-white">
+    <main class="container">
         <?= $this->renderSection('views')?>
     </main>
 
