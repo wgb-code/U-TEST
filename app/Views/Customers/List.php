@@ -33,20 +33,34 @@
             </form>
 
             <article class="list-users">
-            <?php if (isset($customers) && is_array($customers) && count($customers) > 0): ?>
-                <ul class="customer-list">
-                    <?php foreach ($customers as $customer): ?>
-                        <li class="customer-item">
-                            <p><strong>Nome:</strong> <?= esc($customer->name); ?></p>
-                            <p><strong>Email:</strong> <?= esc($customer->email); ?></p>
-                            <p><strong>Status:</strong> <?= esc($customer->status); ?></p>
-                            <p><strong>Data de Admissão:</strong> <?= esc($customer->admission_date); ?></p>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else: ?>
-                <p>Nenhum cliente encontrado.</p>
-            <?php endif; ?>
-        </article>
+                <?php if (isset($customers) && is_array($customers) && count($customers) > 0): ?>
+                    <ul class="customer-list">
+                        <?php foreach ($customers as $customer): ?>
+                            <li class="customer-item">
+                                <p><strong>Nome:</strong> <?= esc($customer->name); ?></p>
+                                <p><strong>Email:</strong> <?= esc($customer->email); ?></p>
+                                <p><strong>Status:</strong> <?= esc($customer->status); ?></p>
+                                <p><strong>Data de Admissão:</strong> <?= esc($customer->admission_date); ?></p>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+
+                    <div class="pagination">
+                        <?php if ($currentPage > 1): ?>
+                            <a href="?page=<?= $currentPage - 1; ?>">Anterior</a>
+                        <?php endif; ?>
+
+                        <span>Página <?= $currentPage; ?> de <?= $totalPages; ?></span>
+
+                        <?php if ($currentPage < $totalPages): ?>
+                            <a href="?page=<?= $currentPage + 1; ?>">Próxima</a>
+                        <?php endif; ?>
+                    </div>
+                <?php else: ?>
+                    <p>Nenhum cliente encontrado.</p>
+                <?php endif; ?>
+            </article>
+
+
         </section>
     <?= $this->endSection() ?>
