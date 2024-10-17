@@ -128,6 +128,147 @@
     cursor: pointer;
 }
 
+.modal-content {
+    background-color: #09090B;
+    border: 1px solid #18181B;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: none;
+}
+
+.modal-header h5 {
+    color: #FAFAFA;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-header p {
+    color: #71717A;
+    font-size: 14px;
+    line-height: 160%;
+}
+
+.modal-body label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FAFAFA;
+}
+
+.modal-body input {
+    border: 1px solid #27272A;
+    background-color: rgba(24, 24, 27, .20);
+}
+
+.modal-body input::placeholder {
+    color: #D4D4D8;
+    font-size: 12px;
+}
+
+.modal-body input:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(24, 24, 27, .20);
+}
+
+.modal-body input[type="date"] {
+    border: 1px solid #27272A;
+    background-color: rgba(24, 24, 27, 0.20);
+    color: #D4D4D8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal-body input[type="date"]::placeholder {
+    color: #D4D4D8;
+    font-size: 12px;
+}
+
+.modal-body input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(80%);
+    opacity: 0.6;
+}
+
+.modal-body input[type="date"]:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #2DD4BF;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.btn.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #27272A;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.btn.btn-primary {
+    gap: 6px;
+    background-color: #2DD4BF;
+    border: none;
+    color: #042F2E;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-secondary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #27272A;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #2DD4BF;
+    background-color: #25B2A2;
+    border-color: #25B2A2;
+}
+
+.Contratado {
+    background-color: #042F2E;
+    color: #2DD4BF;
+}
+
+.Demitido {
+    background-color: #450A0A;
+    color: #F87171;
+}
+
+.Estagiário {
+    background-color: #bdb4ad;
+    color: #540303;
+}
+
+.Férias {
+    background-color: #422006;
+    color: #FACC15;
+}
+
+.Afastado {
+    background-color: #9073ef;
+    color: #081779;
+}
+
+.Contratado,
+.Demitido,
+.Estagiário,
+.Afastado,
+.Férias {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
 main {
     height: 100%;
 }

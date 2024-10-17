@@ -43,7 +43,7 @@
                     <td></td>
                 </tr>
                 <?php foreach ($customers as $cs): ?>
-                    <tr class="body">
+                    <tr class="body" id="table-list">
                         <td>
                             <?= esc($cs['name']); ?>
                         </td>
@@ -51,7 +51,9 @@
                             <?= esc($cs['email']); ?>
                         </td>
                         <td class="secondary-item">
-                            <?= esc($cs['status']); ?>
+                            <div class="<?= esc($cs['status']); ?> d-flex align-items-center justify-content-center">
+                                <?= esc($cs['status']); ?>
+                            </div>
                         </td>
                         <td class="secondary-item">
                             <?= esc($cs['admission']); ?>
@@ -74,10 +76,10 @@
             </table>
 
             <div class="pagination-list d-flex align-items-center justify-content-end">
-                <form method="get" class="page-selector" onsubmit="return false;">
+                <form method="get" class="page-selector">
                     <label class="pagination-label" for="page-select">Ir para a página:</label>
 
-                    <select name="page" id="page-select">
+                    <select name="page" id="page-select" onchange="this.form.submit()">
                         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                             <option class="page-selector-opt" value="<?= $i ?>" <?= $i == $currentPage ? 'selected' : '' ?>><?= $i ?></option>
                         <?php endfor; ?>
