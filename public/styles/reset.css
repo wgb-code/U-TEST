@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     background-color: #1E1E1E;
+	-webkit-font-smoothing: antialiased;
 }
 ol, ul {
 	list-style: none;
