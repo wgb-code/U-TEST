@@ -73,34 +73,13 @@
                 <?php endforeach; ?>
             </table>
 
-            <div class="pagination">
-                <ul class="pagination-list d-flex">
-                    <?php if ($currentPage > 1): ?>
-                        <li>
-                            <a href="?page=<?= $currentPage - 1 ?>" class="pagination-link">Anterior</a>
-                        </li>
-                    <?php endif; ?>
+            <div class="pagination-list d-flex align-items-center justify-content-end">
+                <form method="get" class="page-selector" onsubmit="return false;">
+                    <label class="pagination-label" for="page-select">Ir para a página:</label>
 
-                    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                        <li>
-                            <a href="?page=<?= $i ?>" class="pagination-link <?= $i == $currentPage ? 'active' : '' ?>">
-                                <?= $i ?>
-                            </a>
-                        </li>
-                    <?php endfor; ?>
-
-                    <?php if ($currentPage < $totalPages): ?>
-                        <li>
-                            <a href="?page=<?= $currentPage + 1 ?>" class="pagination-link">Próximo</a>
-                        </li>
-                    <?php endif; ?>
-                </ul>
-
-                <form action="" method="get" class="page-selector">
-                    <label for="page-select">Ir para a página:</label>
-                    <select name="page" id="page-select" onchange="this.form.submit()">
+                    <select name="page" id="page-select">
                         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                            <option value="<?= $i ?>" <?= $i == $currentPage ? 'selected' : '' ?>><?= $i ?></option>
+                            <option class="page-selector-opt" value="<?= $i ?>" <?= $i == $currentPage ? 'selected' : '' ?>><?= $i ?></option>
                         <?php endfor; ?>
                     </select>
                 </form>
