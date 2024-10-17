@@ -61,7 +61,7 @@ class CustomersModel extends Model
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
         } catch (\Exception $e) {
-            log_message($e->getMessage());
+            log_message('error', $e->getMessage());
             return [];
         }
     }
@@ -80,8 +80,33 @@ class CustomersModel extends Model
 
             return (int) $stmt->fetchColumn();
         } catch (\Exception $e) {
-            log_message($e->getMessage());
+            log_message('error', $e->getMessage());
             return 0;
+        }
+    }
+
+    public function postNewCustomer($customerInfo)
+    {
+        $sql = "
+            INSERT INTO " . self::TABLE_NAME . "
+                (name, email, admission_date, status, created_at, updated_at)
+                VALUES (:name, :email, :admission_date, :status, NOW(), NOW())
+            ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->bindParam(':name', $customerInfo['name'], \PDO::PARAM_STR);
+            $stmt->bindParam(':email', $customerInfo['email'], \PDO::PARAM_STR);
+            $stmt->bindParam(':admission_date', $customerInfo['admission_date'], \PDO::PARAM_STR);
+            $stmt->bindParam(':status', $customerInfo['status'], \PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $this->pdo->lastInsertId();
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            return false;
         }
     }
 }

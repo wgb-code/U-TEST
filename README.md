@@ -44,3 +44,35 @@ Dado todo o contexto acima, eu poderia ter optado em fazer com PHP puro ao invé
 
 Desde já, não teria problema nenhum em desenvolver com PHP puro e poderia também optar pelo Laravel ou até mesmo Slim como o framework da aplicação, mas dado a demanda do projeto, CodeIgniter pareceu fazer mais sentido para mim.
 
+# Commits
+
+O projeto foi desenvolvido se baseando no modelo de fluxo `GitFlow` separei as branchs em:
+
+- `feature`: Novas funcionalidades, como o projeto é novo quase tudo é feature
+- `hotfix`: Resolução de bugs que foram percebidos após o desenvolvimento da feature
+
+Não trabalhei com `release`, a cada nova funcionalidade eu realizava o `merge` para `main`.
+
+Quando eu voltava a trabalhar em uma feature que já tinha realizado o `merge` primeiramente verificava se essa feature estava desatualizada em relação a main, caso estivesse, eu realizo o processo inverso, ou seja, executo o `merge` da main na branch em questão.
+
+### As features possuem as seguintes nomenclaturas:
+
+`feature\models`: Commit apenas de funcionalidades relacionadas ao banco de dados, consultas, inserts, delets entre outros...
+
+`feature\controllers`: Commit apenas de funcionalidades relacionada a lógica da minha aplicação, validações, etc...
+
+`feature\views`: Commit apenas dos layouts, seja eles criação, ajustes, estilizações, estruturações etc...
+
+Optei em seguir essa estrutua pois era o que em minha visão fazia mais sentido em um projeto CRUD MVC.
+
+# Demais Informações
+
+A coluna `STATUS` da tabela `customers` possui o tipo `ENUM` com os seguintes valores pré determinados:
+
+- **C** => Contatado
+- **D** => Demitido
+- **E** => Estagiário
+- **A** => Afastado
+- **F** => Férias
+
+Entendo que STATUS de primeiro momento pode ser considerado como "Ativo ou Inativo" mas levando para o contexto `Umentor`, resolvi trazer para o lado Recursos Humanos, se em um futuro fosse necessário realizar a distinção se um cliente está ativo ou não, poderia ser feito através do tipo de STATUS ou também criando uma coluna nova para isto.

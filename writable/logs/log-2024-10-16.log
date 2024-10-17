@@ -744,3 +744,233 @@ in APPPATH\Models\CustomersModel.php on line 10.
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:28:02 --> ArgumentCountError: Too few arguments to function log_message(), 1 passed in C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php on line 64 and at least 2 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\Common.php on line 772.
+ 1 APPPATH\Models\CustomersModel.php(64): log_message('SQLSTATE[HY000]: General error: 2006 MySQL server has gone away')
+ 2 APPPATH\Controllers\Dashboard.php(23): App\Models\CustomersModel->getAllCustomers(1, 10)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:28:07 --> PDOException: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[Method: GET, Route: /]
+in APPPATH\Models\CustomersModel.php on line 29.
+ 1 APPPATH\Models\CustomersModel.php(29): PDO->__construct('mysql:host=127.0.0.1;dbname=dashboard;port=3306;charset=utf8mb4', 'root', '')
+ 2 APPPATH\Models\CustomersModel.php(24): App\Models\CustomersModel->createConnection('mysql:host=127.0.0.1;dbname=dashboard;port=3306;charset=utf8mb4', 'root', '')
+ 3 APPPATH\Controllers\Dashboard.php(14): App\Models\CustomersModel->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:28:30 --> ArgumentCountError: Too few arguments to function log_message(), 1 passed in C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php on line 64 and at least 2 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\Common.php on line 772.
+ 1 APPPATH\Models\CustomersModel.php(64): log_message('SQLSTATE[HY000]: General error: 2006 MySQL server has gone away')
+ 2 APPPATH\Controllers\Dashboard.php(23): App\Models\CustomersModel->getAllCustomers(1, 10)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:47:41 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 75.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:48:21 --> ParseError: syntax error, unexpected token "?"
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 46.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:49:19 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:49:45 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:49:47 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 10:50:00 --> ParseError: syntax error, unexpected end of file
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(43): view('Customers/List', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 16:03:58 --> ParseError: syntax error, unexpected token "=>", expecting "]"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Dashboard.php on line 32.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 16:05:24 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Dashboard.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 16:05:37 --> ParseError: syntax error, unexpected token "if", expecting "function" or "const"
+[Method: GET, Route: /]
+in APPPATH\Helpers\DashboardHelper.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Helpers\\DashboardHelper.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Helpers\\DashboardHelper')
+ 3 APPPATH\Controllers\Dashboard.php(15): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Helpers\\DashboardHelper')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dashboard->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 16:06:18 --> ErrorException: Attempt to read property "name" on array
+[Method: GET, Route: /]
+in APPPATH\Views\Customers\List.php on line 47.
+ 1 APPPATH\Views\Customers\List.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on array', 'C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Views\\Customers\\List.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\app\\Views\\Customers\\List.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Customers/List', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(46): view('Customers/List', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+CRITICAL - 2024-10-16 23:12:08 --> ArgumentCountError: Too few arguments to function log_message(), 1 passed in C:\Users\Isabella\Documents\development\U-TEST\app\Models\CustomersModel.php on line 64 and at least 2 expected
+[Method: GET, Route: /]
+in SYSTEMPATH\Common.php on line 772.
+ 1 APPPATH\Models\CustomersModel.php(64): log_message('SQLSTATE[42S02]: Base table or view not found: 1932 Table \'dashboard.customers\' doesn\'t exist in engine')
+ 2 APPPATH\Controllers\Dashboard.php(23): App\Models\CustomersModel->getAllCustomers(1, 10)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Isabella\\Documents\\development\\U-TEST\\public\\index.php')
+ERROR - 2024-10-16 23:13:23 --> SQLSTATE[42S02]: Base table or view not found: 1932 Table 'dashboard.customers' doesn't exist in engine
+ERROR - 2024-10-16 23:13:23 --> SQLSTATE[42S02]: Base table or view not found: 1932 Table 'dashboard.customers' doesn't exist in engine
+ERROR - 2024-10-16 23:14:59 --> mysqli_sql_exception: Tablespace for table '`dashboard`.`migrations`' exists. Please DISCARD the tablespace before IMPORT in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(806): CodeIgniter\Database\Forge->createTable('migrations', true)
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Isabella\Documents\development\U-TEST\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Isabella\Documents\development\U-TEST\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-10-16 23:15:34 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'dashboard' in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('127.0.0.1', 'root', '', 'dashboard', 3306, '', 0)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Isabella\Documents\development\U-TEST\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'dashboard' in C:\Users\Isabella\Documents\development\U-TEST\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\Isabella\Documents\development\U-TEST\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\Isabella\Documents\development\U-TEST\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\Isabella\Documents\development\U-TEST\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\Isabella\Documents\development\U-TEST\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Isabella\Documents\development\U-TEST\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Isabella\Documents\development\U-TEST\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
