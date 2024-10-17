@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Helpers\DashboardHelper;
 use App\Models\CustomersModel;
 
 class Dashboard extends BaseController
@@ -11,19 +12,40 @@ class Dashboard extends BaseController
     public function __construct()
     {
         $this->customersModel = new CustomersModel();
+        $this->dashboardHelper = new DashboardHelper();
     }
 
     public function index(): string
     {
-        $customers = $this->customersModel->getAllCustomers();
+        $page  = $this->request->getVar('page') ?: 1;
+        $limit = 1;
 
-        if ($customers === false) {
-            $data['error'] = 'Erro ao obter a lista de clientes.';
-        } else {
-            $data['customers'] = $customers;
+        $getCustomers   = $this->customersModel->getAllCustomers($page, $limit);
+        $totalCustomers = $this->customersModel->countAllCustomers();
+
+        $data = [];
+
+        if ($getCustomers) {
+
+            foreach ($getCustomers as $cs) {
+                $data[] = [
+                    'name'      => $cs->name,
+                    'email'     => $cs->email,
+                    'status'    => $this->dashboardHelper->convertTypeToString($cs->status),
+                    'admission' => $this->dashboardHelper->formatDatePTBR($cs->admission_date),
+                    'created'   => $this->dashboardHelper->formatDatePTBR($cs->created_at),
+                    'updated'   => $this->dashboardHelper->formatDatePTBR($cs->updated_at),
+                ];
+            }
         }
 
-        return view('Customers/List', $data);
+        $totalPages = ceil($totalCustomers / $limit);
+
+        return view('Customers/List', [
+            'customers'   => $data,
+            'currentPage' => $page,
+            'totalPages'  => $totalPages
+        ]);
     }
 
     public function createCustomer()

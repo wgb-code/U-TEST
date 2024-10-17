@@ -32,8 +32,10 @@ class CustomersModel extends Model
         return $pdo;
     }
 
-    public function getAllCustomers(): Array
+    public function getAllCustomers(int $page = 1, int $limit = 10): array
     {
+        $offset = ($page - 1) * $limit;
+
         $sql = "
             SELECT
                 id,
@@ -47,16 +49,39 @@ class CustomersModel extends Model
                 " . self::TABLE_NAME . "
             ORDER BY
                 name ASC
+            LIMIT :limit OFFSET :offset
         ";
 
         try {
             $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':limit', $limit, \PDO::PARAM_INT);
+            $stmt->bindParam(':offset', $offset, \PDO::PARAM_INT);
             $stmt->execute();
+
             return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
         } catch (\Exception $e) {
-            log_message($e->getMessage());
-            return false;
+            log_message('error', $e->getMessage());
+            return [];
+        }
+    }
+
+    public function countAllCustomers(): int
+    {
+        $sql = "
+            SELECT
+                COUNT(*)
+            FROM "
+                . self::TABLE_NAME;
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return (int) $stmt->fetchColumn();
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            return 0;
         }
     }
 }
