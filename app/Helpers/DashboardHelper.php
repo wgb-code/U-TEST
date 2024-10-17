@@ -37,4 +37,16 @@ class DashboardHelper
 
         return $typeString;
     }
+
+    public function checkDateIsValid($date): bool
+    {
+        $minDate = '2024-01-01';
+        $maxDate = '2024-10-16';
+
+        if (($date < $minDate) || ($date > $maxDate)) {
+            return false;
+        }
+
+        return true;
+    }
 }
