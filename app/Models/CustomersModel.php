@@ -48,7 +48,7 @@ class CustomersModel extends Model
             FROM
                 " . self::TABLE_NAME . "
             ORDER BY
-                name ASC
+                id DESC
             LIMIT :limit OFFSET :offset
         ";
 
@@ -63,6 +63,34 @@ class CustomersModel extends Model
         } catch (\Exception $e) {
             log_message('error', $e->getMessage());
             return [];
+        }
+    }
+
+    public function getCustomerById(int $id)
+    {
+        $sql = "
+            SELECT
+                id,
+                name,
+                email,
+                status,
+                admission_date
+            FROM
+                " . self::TABLE_NAME . "
+            WHERE
+                id = :id
+        ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+            $stmt->execute();
+
+            return $stmt->fetch(\PDO::FETCH_OBJ);
+
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            return null;
         }
     }
 
@@ -82,6 +110,89 @@ class CustomersModel extends Model
         } catch (\Exception $e) {
             log_message('error', $e->getMessage());
             return 0;
+        }
+    }
+
+    public function postNewCustomer($customerInfo)
+    {
+        $sql = "
+            INSERT INTO " . self::TABLE_NAME . "
+                (name, email, admission_date, status, created_at, updated_at)
+                VALUES (:name, :email, :admission_date, :status, NOW(), NOW())
+            ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->bindParam(':name', $customerInfo['name'], \PDO::PARAM_STR);
+            $stmt->bindParam(':email', $customerInfo['email'], \PDO::PARAM_STR);
+            $stmt->bindParam(':admission_date', $customerInfo['admission_date'], \PDO::PARAM_STR);
+            $stmt->bindParam(':status', $customerInfo['status'], \PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $this->pdo->lastInsertId();
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            return false;
+        }
+    }
+
+    public function editCustomer($id, $data)
+    {
+        $sql = "
+            UPDATE " . self::TABLE_NAME . "
+            SET
+                name = :name,
+                email = :email,
+                admission_date = :admission_date,
+                status = :status,
+                updated_at = :updated_at
+            WHERE
+                id = :id
+        ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $updatedAt = date('Y-m-d H:i:s');
+
+            $stmt->bindParam(':name', $data['name'], \PDO::PARAM_STR);
+            $stmt->bindParam(':email', $data['email'], \PDO::PARAM_STR);
+            $stmt->bindParam(':admission_date', $data['admission_date'], \PDO::PARAM_STR);
+            $stmt->bindParam(':status', $data['status'], \PDO::PARAM_STR);
+            $stmt->bindParam(':updated_at', $updatedAt, \PDO::PARAM_STR);
+            $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            return $stmt->rowCount();
+
+        } catch (\Exception $e) {
+            log_message('error', 'Erro na atualização do cliente: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function deleteCustomer($id) {
+        $sql = "
+            DELETE FROM " . self::TABLE_NAME . "
+            WHERE
+                id = :id
+        ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            return $stmt->rowCount();
+
+        } catch (\Exception $e) {
+            log_message('error', 'Erro na atualização do cliente: ' . $e->getMessage());
+            return false;
         }
     }
 }
