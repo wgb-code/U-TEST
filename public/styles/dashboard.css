@@ -78,6 +78,10 @@
     color: #D4D4D8;
 }
 
+.table-list tr.header {
+    font-weight: 600;
+}
+
 .table-list tr.header td {
     text-align: left;
     padding: 12px 16px;
