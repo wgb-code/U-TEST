@@ -59,7 +59,7 @@
                         <td class="secondary-item">
                             <?= esc($cs['admission']); ?>
                         </td>
-                        <td>
+                        <td class="secondary-item">
                             <?= esc($cs['updated']); ?>
                         </td>
                         <td class="d-flex justify-content-end">
