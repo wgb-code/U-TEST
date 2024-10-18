@@ -129,7 +129,10 @@ function deleteCustomer(url, id) {
 
             if (response) {
                 Swal.fire('Excluído', 'O cliente foi desativado com sucesso.', 'success')
-                location.reload();
+
+                setTimeout(function () {
+                    location.reload()
+                }, 2000)
             } else {
                 Swal.fire('Erro!', 'Ocorreu um erro ao tentar desativar o cliente.', 'error');
             }
