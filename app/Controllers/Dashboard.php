@@ -44,6 +44,15 @@ class Dashboard extends BaseController
 
             if ($getCustomers) {
                 foreach ($getCustomers as $cs) {
+                    $showUpdate = '';
+
+                    $createDate = $cs->created_at;
+                    $updateDate = $cs->updated_at;
+
+                    if (($updateDate) !== ($createDate)) {
+                        $showUpdate = $this->dashboardHelper->formatDatePTBR($cs->updated_at);
+                    }
+
                     $data[] = [
                         'id'        => $cs->id,
                         'name'      => $cs->name,
@@ -51,7 +60,7 @@ class Dashboard extends BaseController
                         'status'    => $this->dashboardHelper->convertTypeToString($cs->status),
                         'admission' => $this->dashboardHelper->formatDatePTBR($cs->admission_date),
                         'created'   => $this->dashboardHelper->formatDatePTBR($cs->created_at),
-                        'updated'   => $this->dashboardHelper->formatDatePTBR($cs->updated_at),
+                        'updated'   => $showUpdate,
                     ];
                 }
             }

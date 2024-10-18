@@ -59,6 +59,9 @@
                         <td class="secondary-item">
                             <?= esc($cs['admission']); ?>
                         </td>
+                        <td>
+                            <?= esc($cs['updated']); ?>
+                        </td>
                         <td class="d-flex justify-content-end">
                             <button class="list-btn-more">
                                 <img
