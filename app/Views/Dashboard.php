@@ -63,7 +63,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="d-flex align-items-center btn btn-primary" onclick="submitCustomerForm()">
+                    <button type="button" class="d-flex align-items-center btn btn-primary" onclick="createCustomer()">
                         <img
                             src="<?= base_url('assets/check.svg') ?>"
                             alt="Ícone de Tags"
