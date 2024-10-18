@@ -58,9 +58,6 @@
                         <td class="secondary-item">
                             <?= esc($cs['admission']); ?>
                         </td>
-                        <td class="secondary-item">
-                            <?= esc($cs['updated']); ?>
-                        </td>
                         <td class="d-flex justify-content-end">
                             <button class="list-btn-more">
                                 <img
@@ -70,6 +67,40 @@
                                     height="16"
                                 >
                             </button>
+                            <aside class="dropdown-options">
+                                <ul>
+                                    <li>
+                                        <button
+                                            class="edit-button d-flex align-items-center gap-2"
+                                            data-url="<?= site_url('Dashboard/deleteCustomer') ?>"
+                                            data-id="<?= $cs['id']; ?>"
+                                            data-name="<?= esc($cs['name']); ?>"
+                                            data-email="<?= esc($cs['email']); ?>"
+                                            data-status="<?= esc($cs['status']); ?>"
+                                            onclick="fillEditModal(this)"
+                                        >
+                                            <img src="<?= base_url('assets/user-edit.svg') ?>" alt="Ícone de editar" width="16" height="16">
+                                            <p>Editar</p>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="delete-button d-flex align-items-center gap-2"
+                                            data-url="<?= site_url('Dashboard/deleteCustomer/') ?>"
+                                            data-id="<?= $cs['id']; ?>"
+                                            onclick="confirmDelete(this)"
+                                        >
+                                            <img
+                                                src="<?= base_url('assets/user-delete.svg') ?>"
+                                                alt="Ícone de deletar"
+                                                width="16"
+                                                height="16"
+                                            >
+                                            <p>Excluir</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </aside>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -91,4 +122,54 @@
             <p>Cadastre um novo cliente para listá-lo aqui.</p>
         <?php endif; ?>
     </section>
+
+    <div id="editCustomerModal" class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Cliente</h5>
+                    <p>Preencha os novos dados do cliente</p>
+                </div>
+                <div class="modal-body">
+                    <form id="editCustomerForm" action="<?= site_url('Dashboard/editCustomer'); ?>" method="POST">
+                        <input type="hidden" name="idCustomer" value="">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="nameCustomer" id="nome" placeholder="Digite o nome do usuário" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" name="emailCustomer" id="email" placeholder="Digite o e-mail do usuário" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select name="statusCustomer" class="form-control" id="status" required>
+                                <option value="C">Contratado</option>
+                                <option value="D">Demitido</option>
+                                <option value="E">Estagiário</option>
+                                <option value="A">Afastado</option>
+                                <option value="F">Férias</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Data de Admissão</label>
+                            <input id="date" class="form-control" name="createCustomer" type="date" min="2024-01-01" max="2024-10-16" required/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="d-flex align-items-center btn btn-primary" onclick="editCustomer()">
+                        <img
+                            src="<?= base_url('assets/check.svg') ?>"
+                            alt="Ícone de Tags"
+                            width="16"
+                            height="16"
+                        >
+                        <p>Editar</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?= $this->endSection(); ?>

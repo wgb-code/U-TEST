@@ -34,8 +34,11 @@ body {
     background-color: #1E1E1E;
 	-webkit-font-smoothing: antialiased;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
+}
+a {
+	text-decoration: none;
 }
 blockquote, q {
 	quotes: none;

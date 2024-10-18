@@ -161,6 +161,8 @@
 .modal-body input {
     border: 1px solid #27272A;
     background-color: rgba(24, 24, 27, .20);
+    color: #cecece;
+    font-size: 12px;
 }
 
 .modal-body input::placeholder {
@@ -172,6 +174,28 @@
     outline: none;
     box-shadow: none;
     background-color: rgba(24, 24, 27, .20);
+    color: #cecece;
+}
+
+.modal-body select {
+    border: 1px solid #27272A;
+    background-color: rgba(24, 24, 27, .20);
+    color: #cecece;
+    font-size: 12px;
+}
+
+.modal-body select:focus,
+.modal-body select:active {
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(24, 24, 27, .20);
+    border-color: #7327dc;
+    color: #cecece;
+}
+
+.modal-body select:focus option {
+    background-color: rgba(24, 24, 27, .80);
+    color: #cecece;
 }
 
 .modal-body input[type="date"] {
@@ -267,6 +291,36 @@
     border-radius: 12px;
     font-size: 10px;
     font-weight: 600;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-options {
+    background-color: #27272A;
+    border: 1px solid #27272A;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-options li {
+    padding: 10px 12px;
+}
+
+.dropdown-options li button {
+    border: none;
+    background-color: transparent;
+}
+
+.edit-button {
+    color: #FAFAFA;
+}
+
+.delete-button {
+    color: #DF3434;
 }
 
 main {
