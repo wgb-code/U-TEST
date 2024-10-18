@@ -10,6 +10,7 @@
                     class="form-filter-input"
                     placeholder="Pesquisar Clientes"
                     type="text"
+                    disabled
                 >
 
                 <img
@@ -172,4 +173,55 @@
             </div>
         </div>
     </div>
+
+    <div id="searchCustomerModal" class="modal fade" tabindex="-1" aria-labelledby="searchCustomerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchCustomerModalLabel">Filtrar Clientes</h5>
+                    <p>Em desenvolvimento...</p>
+                </div>
+                <div class="modal-body">
+                    <form id="searchCustomerForm" data-url="<?= site_url('Dashboard/index') ?>" method="POST">
+                        <div class="mb-3">
+                            <label for="searchStatus" class="form-label">Status</label>
+                            <select class="form-control" id="searchStatus" name="searchStatus" disabled>
+                                <option value="C">Contratado</option>
+                                <option value="D">Demitido</option>
+                                <option value="E">Estagiário</option>
+                                <option value="A">Afastado</option>
+                                <option value="F">Férias</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="searchCreateDate" class="form-label">Mês de Criação</label>
+                            <select class="form-control" id="searchCreateDate" name="searchCreateDate" disabled>
+                                <option value="">Todos</option>
+                                <option value="01">Janeiro</option>
+                                <option value="02">Fevereiro</option>
+                                <option value="03">Março</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Maio</option>
+                                <option value="06">Junho</option>
+                                <option value="07">Julho</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Setembro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="searchEmail" class="form-label">Nome ou Email</label>
+                            <input type="email" class="form-control" name="searchEmail" id="searchEmail" placeholder="Digite nome ou email do usuário" required disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="searchCustomers()" disabled>Pesquisar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <?= $this->endSection(); ?>

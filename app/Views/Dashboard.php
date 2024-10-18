@@ -13,12 +13,13 @@
     <header class="container my-5">
         <ul class="d-flex align-items-center justify-content-between">
             <li class="logo-title d-flex align-items-center">
-                <img
-                    src="<?= base_url('favicon.ico') ?>"
-                    alt="Logo da umentor"
-                >
-
-                <h1 class="text-white fs-6">Controle de Clientes</h1>
+                <a href="<?= base_url('/') ?>" class="d-flex align-items-center text-decoration-none">
+                    <img
+                        src="<?= base_url('favicon.ico') ?>"
+                        alt="Logo da umentor"
+                    >
+                    <h1 class="text-white fs-6 ms-2">Controle de Clientes</h1>
+                </a>
             </li>
             <li>
                 <button class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#createUserModal">

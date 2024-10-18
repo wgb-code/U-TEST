@@ -137,11 +137,44 @@ function deleteCustomer(url, id) {
     });
 }
 
+function searchCustomers() {
+
+    const form = $('#searchCustomerForm');
+    const url = form.data('url');
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: form.serialize(),
+        dataType: 'json',
+        success: function(response) {
+
+            if (response.status === 'success') {
+                $('#searchCustomerModal').modal('hide');
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ops...',
+                    text: response.message,
+                });
+            }
+        }
+    });
+}
+
+
 $(document).ready(function () {
     $('.list-btn-more').on('click', function (e) {
         e.stopPropagation()
         $(this).siblings('.dropdown-options').toggle()
     })
+
+    $('.filter-btn').on('click', function (e) {
+        e.preventDefault();
+        $('#searchCustomerModal').modal('show');
+    });
+
 
     $(document).on('click', function () {
         $('.dropdown-options').hide()
